@@ -1,6 +1,11 @@
-def main():
-    print("Hello from university-knowledge-assistant!")
+from fastapi import FastAPI
+
+app = FastAPI(
+    title="University Knowledge Assistant",
+    version="0.1.0",
+)
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/health")
+def health_check() -> dict[str, str]:
+    return {"status": "ok"}
