@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routers.health import router
 
 app = FastAPI(
     title="University Knowledge Assistant",
@@ -6,6 +7,4 @@ app = FastAPI(
 )
 
 
-@app.get("/health")
-def health_check() -> dict[str, str]:
-    return {"status": "ok"}
+app.include_router(router)
