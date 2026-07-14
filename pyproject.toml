@@ -1,7 +1,7 @@
 [project]
 name = "university-knowledge-assistant"
 version = "0.1.0"
-description = "Add your description here"
+description = "Backend application for uploading, searching and exploring university notes and documents"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
