@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.routers.health import health_router
+from app.routers.documents import documents_router
 
 app = FastAPI(
     title="University Knowledge Assistant",
@@ -8,3 +9,4 @@ app = FastAPI(
 
 
 app.include_router(health_router)
+app.include_router(documents_router)

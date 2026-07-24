@@ -40,10 +40,13 @@ More advanced features will be introduced incrementally after the core backend f
 
 * Initial FastAPI application
 * Health-check endpoint
+* PDF upload
+* PDF validation
+* Text extraction
 
 ### Next
 
-* PDF upload
+* Word and phrase search
 
 ---
 
@@ -55,9 +58,12 @@ More advanced features will be introduced incrementally after the core backend f
 * FastAPI
 * Uvicorn
 * Pydantic
+* pypdf
+* python-multipart
 * uv
 * Git
 * GitHub
+
 
 ### Planned
 
@@ -73,6 +79,7 @@ More advanced features will be introduced incrementally after the core backend f
 ```text
 app/
 ├── routers/
+│   ├── documents.py
 │   └── health.py
 └── main.py
 
@@ -126,9 +133,10 @@ http://127.0.0.1:8000/docs
 
 ## Available Endpoints
 
-| Method | Endpoint  | Description  |
-| ------ | --------- | ------------ |
-| GET    | `/health` | Health check |
+| Method | Endpoint | Description |
+| ------ | -------- | ----------- |
+| GET | /health | Check the application status |
+| POST | /documents | Upload, validate and process a PDF document |
 
 ---
 
@@ -150,9 +158,9 @@ Features are developed in dedicated branches and merged into `develop` through P
 
 * [x] Initial FastAPI application
 * [x] Health-check endpoint
-* [ ] PDF upload
-* [ ] PDF validation
-* [ ] Text extraction
+* [x] PDF upload
+* [x] PDF validation
+* [x] Text extraction
 * [ ] Word and phrase search
 * [ ] Passage retrieval with page numbers
 * [ ] Database integration
