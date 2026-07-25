@@ -11,7 +11,7 @@ The project is currently under active development as a personal portfolio projec
 The long-term goal is to build a platform that allows students to:
 
 * upload PDF documents;
-* search for words and phrases;
+* search text within PDF documents;
 * retrieve relevant passages and page numbers;
 * perform semantic searches;
 * generate summaries, quizzes and flashcards;
@@ -26,7 +26,7 @@ The long-term goal is to build a platform that allows students to:
 The first version of the application will provide:
 
 * PDF upload;
-* word and phrase search;
+* text search;
 * passage retrieval;
 * page number retrieval.
 
@@ -46,7 +46,7 @@ More advanced features will be introduced incrementally after the core backend f
 
 ### Next
 
-* Word and phrase search
+* Text search
 
 ---
 
@@ -161,7 +161,7 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] PDF upload
 * [x] PDF validation
 * [x] Text extraction
-* [ ] Word and phrase search
+* [ ] Text search
 * [ ] Passage retrieval with page numbers
 * [ ] Database integration
 * [ ] Automated testing
