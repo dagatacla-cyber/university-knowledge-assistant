@@ -43,10 +43,12 @@ More advanced features will be introduced incrementally after the core backend f
 * PDF upload
 * PDF validation
 * Text extraction
+* Text search
+* Passage retrieval with page numbers
 
 ### Next
 
-* Text search
+* Database integration
 
 ---
 
@@ -80,7 +82,11 @@ More advanced features will be introduced incrementally after the core backend f
 app/
 ├── routers/
 │   ├── documents.py
-│   └── health.py
+│   ├── health.py
+│   └── search.py
+├── services/
+│   ├── documents.py
+│   └── search.py
 └── main.py
 
 LICENSE
@@ -133,10 +139,13 @@ http://127.0.0.1:8000/docs
 
 ## Available Endpoints
 
+## Available Endpoints
+
 | Method | Endpoint | Description |
 | ------ | -------- | ----------- |
 | GET | /health | Check the application status |
 | POST | /documents | Upload, validate and process a PDF document |
+| POST | /search | Search text within an uploaded PDF document |
 
 ---
 
@@ -161,8 +170,8 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] PDF upload
 * [x] PDF validation
 * [x] Text extraction
-* [ ] Text search
-* [ ] Passage retrieval with page numbers
+* [x] Text search
+* [x] Passage retrieval with page numbers
 * [ ] Database integration
 * [ ] Automated testing
 * [ ] Docker
