@@ -48,7 +48,7 @@ More advanced features will be introduced incrementally after the core backend f
 
 ### Next
 
-* Database integration
+* Automated testing
 
 ---
 
@@ -69,9 +69,9 @@ More advanced features will be introduced incrementally after the core backend f
 
 ### Planned
 
+* Automated testing
 * PostgreSQL
 * Docker
-* Automated testing
 * CI/CD
 
 ---
@@ -139,8 +139,6 @@ http://127.0.0.1:8000/docs
 
 ## Available Endpoints
 
-## Available Endpoints
-
 | Method | Endpoint | Description |
 | ------ | -------- | ----------- |
 | GET | /health | Check the application status |
@@ -172,8 +170,8 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Text extraction
 * [x] Text search
 * [x] Passage retrieval with page numbers
-* [ ] Database integration
 * [ ] Automated testing
+* [ ] Database integration
 * [ ] Docker
 * [ ] CI/CD
 
