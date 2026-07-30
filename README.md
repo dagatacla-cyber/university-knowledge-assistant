@@ -79,15 +79,21 @@ More advanced features will be introduced incrementally after the core backend f
 ## Project Structure
 
 ```text
-app/
-├── routers/
-│   ├── documents.py
-│   ├── health.py
-│   └── search.py
-├── services/
-│   ├── documents.py
-│   └── search.py
-└── main.py
+src/
+└── university_knowledge_assistant/
+    ├── __init__.py
+    ├── main.py
+    ├── routers/
+    │   ├── __init__.py
+    │   ├── documents.py
+    │   ├── health.py
+    │   └── search.py
+    └── services/
+        ├── __init__.py
+        ├── documents.py
+        └── search.py
+
+tests/
 
 LICENSE
 README.md
@@ -107,7 +113,7 @@ uv.lock
 ### Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:dagatacla-cyber/university-knowledge-assistant.git
 cd university-knowledge-assistant
 ```
 
@@ -116,11 +122,12 @@ cd university-knowledge-assistant
 ```bash
 uv sync
 ```
+This command creates (or updates) the virtual environment, installs all project dependencies, and installs the application as an editable Python package.
 
 ### Run the application
 
 ```bash
-uv run uvicorn app.main:app --reload
+uv run uvicorn university_knowledge_assistant.main:app --reload
 ```
 
 The application will be available at:

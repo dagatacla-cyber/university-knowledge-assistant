@@ -1,5 +1,5 @@
 from fastapi import APIRouter, File, UploadFile, status
-from app.services.documents import process_pdf
+from university_knowledge_assistant.services.documents import process_pdf
 
 
 documents_router = APIRouter()
