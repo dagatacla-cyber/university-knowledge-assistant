@@ -41,7 +41,7 @@ async def process_pdf(file: UploadFile) -> list[str]:
     # Check if any text was extracted
     if not any(page_text.strip() for page_text in pages):
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             detail="The PDF does not contain extractable text.",
         )
 

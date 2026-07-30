@@ -45,10 +45,11 @@ More advanced features will be introduced incrementally after the core backend f
 * Text extraction
 * Text search
 * Passage retrieval with page numbers
+* Automated testing
 
 ### Next
 
-* Automated testing
+* Static analysis
 
 ---
 
@@ -65,14 +66,17 @@ More advanced features will be introduced incrementally after the core backend f
 * uv
 * Git
 * GitHub
-
+* pytest
+* httpx
+* pytest-asyncio
 
 ### Planned
 
-* Automated testing
+* Ruff (static analysis)
+* GitHub Actions (Continuous Integration)
 * PostgreSQL
 * Docker
-* CI/CD
+* Continuous Deployment
 
 ---
 
@@ -94,6 +98,13 @@ src/
         └── search.py
 
 tests/
+├── api/
+│   ├── test_documents_api.py
+│   ├── test_health_api.py
+│   └── test_search_api.py
+└── services/
+    ├── test_documents_service.py
+    └── test_search_service.py
 
 LICENSE
 README.md
@@ -144,6 +155,20 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## Running Tests
+
+Run the complete test suite:
+
+```bash
+uv run pytest
+```
+Run the test suite with detailed output:
+```bash
+uv run pytest -v
+```
+
+---
+
 ## Available Endpoints
 
 | Method | Endpoint | Description |
@@ -177,11 +202,12 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Text extraction
 * [x] Text search
 * [x] Passage retrieval with page numbers
-* [ ] Automated testing
+* [x] Automated testing
+* [ ] Static analysis
+* [ ] Continuous Integration with GitHub Actions
 * [ ] Database integration
 * [ ] Docker
-* [ ] CI/CD
-
+* [ ] Continuous Deployment
 ---
 
 ## License
