@@ -1,5 +1,5 @@
 from fastapi import APIRouter, File, Form, UploadFile, status
-from app.services.search import search_document_service
+from university_knowledge_assistant.services.search import search_document_service
 
 search_router = APIRouter()
 
