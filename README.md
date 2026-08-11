@@ -46,10 +46,11 @@ More advanced features will be introduced incrementally after the core backend f
 * Text search
 * Passage retrieval with page numbers
 * Automated testing
+* Static analysis
 
 ### Next
 
-* Static analysis
+- Continuous Integration with GitHub Actions
 
 ---
 
@@ -69,10 +70,10 @@ More advanced features will be introduced incrementally after the core backend f
 * pytest
 * httpx
 * pytest-asyncio
+* Ruff
 
 ### Planned
 
-* Ruff (static analysis)
 * GitHub Actions (Continuous Integration)
 * SonarCloud (code quality analysis)
 * PostgreSQL
@@ -170,6 +171,30 @@ uv run pytest -v
 
 ---
 
+## Static Analysis
+
+Run Ruff linting:
+```bash
+uv run ruff check .
+```
+
+Automatically fix safe linting issues:
+```bash
+uv run ruff check . --fix
+```
+
+Check code formatting:
+```bash
+uv run ruff format --check .
+```
+
+Format the code automatically:
+```bash
+uv run ruff format .
+```
+
+---
+
 ## Available Endpoints
 
 | Method | Endpoint | Description |
@@ -204,7 +229,7 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Text search
 * [x] Passage retrieval with page numbers
 * [x] Automated testing
-* [ ] Static analysis
+* [x] Static analysis
 * [ ] Continuous Integration with GitHub Actions
 * [ ] Code quality analysis with SonarCloud
 * [ ] Database integration
