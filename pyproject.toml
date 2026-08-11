@@ -20,6 +20,7 @@ dev = [
     "httpx2>=2.9.1",
     "pytest>=9.1.1",
     "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.2",
 ]
 
 [tool.pytest.ini_options]
@@ -27,3 +28,6 @@ testpaths = ["tests"]
 
 [tool.uv.build-backend]
 module-root = "src"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

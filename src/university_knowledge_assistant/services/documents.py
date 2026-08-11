@@ -1,8 +1,9 @@
+from io import BytesIO
+
 from fastapi import HTTPException, UploadFile, status
 from pypdf import PdfReader
 from pypdf.errors import PdfReadError
 
-from io import BytesIO
 
 async def process_pdf(file: UploadFile) -> list[str]:
     # Validate MIME type
@@ -25,7 +26,7 @@ async def process_pdf(file: UploadFile) -> list[str]:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="The uploaded file is not a valid PDF.",
-        )
+        ) from None
 
     # Extract text page by page
     pages = []

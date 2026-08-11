@@ -2,7 +2,6 @@ from fastapi.testclient import TestClient
 
 from university_knowledge_assistant.main import app
 
-
 client = TestClient(app)
 
 

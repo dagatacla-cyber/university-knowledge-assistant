@@ -74,6 +74,7 @@ More advanced features will be introduced incrementally after the core backend f
 
 * Ruff (static analysis)
 * GitHub Actions (Continuous Integration)
+* SonarCloud (code quality analysis)
 * PostgreSQL
 * Docker
 * Continuous Deployment
@@ -157,7 +158,7 @@ http://127.0.0.1:8000/docs
 
 ## Running Tests
 
-Run the complete test suite:
+Run the test suite from the project root:
 
 ```bash
 uv run pytest
@@ -205,9 +206,11 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Automated testing
 * [ ] Static analysis
 * [ ] Continuous Integration with GitHub Actions
+* [ ] Code quality analysis with SonarCloud
 * [ ] Database integration
 * [ ] Docker
 * [ ] Continuous Deployment
+
 ---
 
 ## License

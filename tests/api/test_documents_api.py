@@ -5,7 +5,6 @@ from fastapi.testclient import TestClient
 from university_knowledge_assistant.main import app
 from university_knowledge_assistant.routers import documents as documents_router
 
-
 client = TestClient(app)
 
 
@@ -33,6 +32,4 @@ def test_upload_document_returns_201(monkeypatch):
 
     # Assert
     assert response.status_code == 201
-    assert response.json() == {
-        "message": "PDF uploaded and processed successfully."
-    }
+    assert response.json() == {"message": "PDF uploaded and processed successfully."}

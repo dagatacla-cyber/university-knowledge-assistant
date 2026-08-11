@@ -132,7 +132,4 @@ def test_process_pdf_rejects_pdf_without_extractable_text(monkeypatch):
 
     # Assert
     assert exception.value.status_code == 422
-    assert (
-        exception.value.detail
-        == "The PDF does not contain extractable text."
-    )
+    assert exception.value.detail == "The PDF does not contain extractable text."
