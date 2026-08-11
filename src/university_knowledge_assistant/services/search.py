@@ -70,7 +70,6 @@ async def search_document_service(
                     "passage": passage,
                 }
                 occurrences.append(occurrence_result)
-                
 
             results.append(
                 {
@@ -81,4 +80,3 @@ async def search_document_service(
             )
 
     return results
-

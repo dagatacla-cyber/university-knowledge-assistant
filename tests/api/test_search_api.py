@@ -5,7 +5,6 @@ from fastapi.testclient import TestClient
 from university_knowledge_assistant.main import app
 from university_knowledge_assistant.routers import search as search_router
 
-
 client = TestClient(app)
 
 
