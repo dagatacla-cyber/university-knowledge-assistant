@@ -78,7 +78,11 @@ More advanced features will be introduced incrementally after the core backend f
 * SonarCloud (code quality analysis)
 * PostgreSQL
 * Docker
-* Continuous Deployment
+* Cloud deployment
+* Infrastructure as Code
+* Observability and monitoring
+* Continuous Delivery
+* DevSecOps practices
 
 ---
 
@@ -231,10 +235,14 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Automated testing
 * [x] Static analysis
 * [ ] Continuous Integration with GitHub Actions
-* [ ] Code quality analysis with SonarCloud
+* [ ] Code quality analysis
 * [ ] Database integration
-* [ ] Docker
-* [ ] Continuous Deployment
+* [ ] Containerization
+* [ ] Cloud deployment
+* [ ] Infrastructure as Code
+* [ ] Observability and monitoring
+* [ ] Continuous Delivery
+* [ ] DevSecOps practices
 
 ---
 
