@@ -47,10 +47,11 @@ More advanced features will be introduced incrementally after the core backend f
 * Passage retrieval with page numbers
 * Automated testing
 * Static analysis
+* Continuous Integration with GitHub Actions
 
 ### Next
 
-- Continuous Integration with GitHub Actions
+* Code quality analysis with SonarCloud
 
 ---
 
@@ -71,20 +72,29 @@ More advanced features will be introduced incrementally after the core backend f
 * httpx
 * pytest-asyncio
 * Ruff
+* GitHub Actions
 
 ### Planned
 
-* GitHub Actions (Continuous Integration)
 * SonarCloud (code quality analysis)
 * PostgreSQL
 * Docker
-* Continuous Deployment
+* Cloud deployment
+* Infrastructure as Code
+* Observability and monitoring
+* Continuous Delivery
+* DevSecOps practices
 
 ---
 
 ## Project Structure
 
 ```text
+
+.github/
+└── workflows/
+    └── ci.yml
+
 src/
 └── university_knowledge_assistant/
     ├── __init__.py
@@ -195,6 +205,20 @@ uv run ruff format .
 
 ---
 
+## Continuous Integration
+
+Continuous Integration is implemented using GitHub Actions.
+
+The CI workflow automatically runs:
+
+* Ruff linting;
+* Ruff formatting checks;
+* automated tests.
+
+The workflow runs on every push and on Pull Requests targeting `develop` or `main`.
+
+---
+
 ## Available Endpoints
 
 | Method | Endpoint | Description |
@@ -230,11 +254,15 @@ Features are developed in dedicated branches and merged into `develop` through P
 * [x] Passage retrieval with page numbers
 * [x] Automated testing
 * [x] Static analysis
-* [ ] Continuous Integration with GitHub Actions
-* [ ] Code quality analysis with SonarCloud
+* [x] Continuous Integration with GitHub Actions
+* [ ] Code quality analysis
 * [ ] Database integration
-* [ ] Docker
-* [ ] Continuous Deployment
+* [ ] Containerization
+* [ ] Cloud deployment
+* [ ] Infrastructure as Code
+* [ ] Observability and monitoring
+* [ ] Continuous Delivery
+* [ ] DevSecOps practices
 
 ---
 
